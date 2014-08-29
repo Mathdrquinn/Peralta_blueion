@@ -1,0 +1,216 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <title>Powell Peralta</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="styles/vendor.css">
+    <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="bower_components/foundation-5.4.0/css/foundation.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/medium.css">
+
+    <script src="scripts/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <!-- Background images -->
+    <div id="backgroundFilter"></div>
+    <div id="backgroundImage"></div>
+
+    <!-- Holds this beaut together -->
+    <div class="container">
+      <!-- moving polyong -->
+
+      <!-- contains social features -->
+      <header class="row social">
+            <div id="subscribe" class="clickable"><a id="subATag" href="http://powell-peralta.com/rss/" title="Subscribe to Our Page">SUBSCRIBE</a><span id="dot"></span></div>
+            <div id="dots"><div class="dot dot1"></div><div class="dot dot2"></div><div class="dot dot3"></div><div class="dot dot4"></div><div class="dot dot5"></div>
+            </div>
+            <div class="facebook butt bborder clickable" data-dot=".dot1" data-color="#0F3B91">
+              <div class="socicon">b</div>
+              <iframe id="fbFrame" class="frame hidden" src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpowellperalta&width&height=62&colorscheme=light&show_faces=false&header=true&stream=false&show_border=true" frameborder="0">
+              </iframe>
+            </div>
+            <div class="rss butt bborder clickable" data-dot=".dot2" data-color="#E59A0B">
+              <div class="socicon">,</div>
+              <div id="rssFrame" class="frame hidden"><a href="javascript:(function(){var a=window,b=document,c=encodeURIComponent,d=a.open('http://www.seocentro.com/cgi-bin/promotion/bookmark-rss/rss.pl?u='+c( 'http://powell-peralta.com/rss/' ),'bookmark_popup','left='+((a.screenX||a.screenLeft)+10)+',top='+((a.screenY||a.screenTop)+10)+',height=480px,width=720px,scrollbars=1,resizable=1,alwaysRaised=1');a.setTimeout(function(){ d.focus()},300)})();" title="Social Bookmark"><img src="http://www.seocentro.com/bookmark-rss/images/rss_button02.gif" alt="RSS Feed Readers" border="0" title="RSS Feed Readers"></a></div>
+            </div>
+            <div class="twitter butt bborder clickable" data-dot=".dot3" data-color="#0B90E5">
+              <div class="socicon">a</div>
+              <iframe id="twitterFrame" class="frame hidden" src="//platform.twitter.com/widgets/follow_button.html?screen_name=PowellPeralta&lang=en" frameborder="0">
+              </iframe>
+              </div>
+            <div class="youtube butt bborder clickable" data-dot=".dot4" data-color="#E82C0C">
+              <div class="socicon">r</div>
+              <div id="youtubeFrame" class="frame hidden"><div class="g-ytsubscribe" data-channel="PowellPeraltaTV" data-layout="full" data-count="default"></div></div>
+              </div>
+      </header>
+
+      <!-- nav bar -->
+      <nav id="navTop" class="row">
+        <div class="polygonPlace" style="position: absolute; left: -225px; top:45px">
+          <div id="polygonDrop" class=""></div>
+          <div id="polygon" class="">NAVIGATION</div>
+        </div>
+        <ul role="menu" class="large-3 medium-3 columns navUl">
+          <li class="navList navTitle bborder" data-loc="#main" data-textile="SK8T NEWS"><h3 role="menuitem" class="navTitleText"><div class="turnLeft"></div><a href="#main">SK8T NEWS</a><div class="turnRight"></div></h3></li>
+          <li class="navList hidden"></li>
+          <li class="navList hidden"></li>
+        </ul>
+        <ul role="menu" class="large-3 medium-3 columns  navUl">
+          <li class="navList navTitle bborder" data-loc="#lance" data-textile="SKATEBOARDERS"><h3 role="menuitem" class="navTitleText"><div class="turnLeft"></div><a href="#skills">SKATEBOARDERS</a><div class="turnRight"></div></h3></li>
+          <li class="navList hidden"></li>
+          <li class="navList  hidden"></li>
+        </ul>
+        <ul role="menu" class="large-3 medium-3 columns navUl">
+          <li class="navList navTitle bborder" data-loc="#skateboardsSection" data-textile="BOARD DESIGN"><h3 role="menuitem" class="navTitleText"><div class="turnLeft"></div><a href="#skateboardsSection">BOARD DESIGN</a><div class="turnRight"></div></h3></li>
+          <li class="navList hidden"></li>
+          <li class="navList hidden"></li>
+        </ul>
+        <ul role="menu" class="large-3 medium-3 columns navUl">
+          <li class="navList navTitle bborder"><h3 role="menuitem" class="navTitleText" data-loc=".contact" data-textile="CONTACT"><div class="turnLeft"></div><a href="#contact">CONTACT US</a><div class="turnRight"></div></h3></li>
+          <li class="navList hidden"></li>
+          <li class="navList hidden"></li>
+        </ul>
+      </nav>
+
+      <!-- Banner image and logo -->
+      <div id="banner" class="large-12 columns">
+        <div id="carouselImage1" class="active" data-dot="#1"></div>
+        <div id="carouselImage2" class="onDeck" data-dot="#2"></div>
+        <div id="carouselImage3" class="inTheHole" data-dot="#3"></div>
+        <div id="layer"></div><h1 id="logo" class=""></h1>
+      </div>
+      <div class="row">
+        <div id="carousel" class="large-12 columns">
+          <div id="1" class="dotsBig selected"></div>
+          <div id="2" class="dotsBig"></div>
+          <div id="3" class="dotsBig"></div>
+        </div>
+      </div>
+
+      <!-- Section containing articles -->
+      <div id="main" class="row">
+        <div class="polygonPlace" style="position: absolute; left: -5px">
+        </div>
+      </div>
+
+      <!-- Skateboarder porfile section -->
+      <div class="skills row" id="skills">
+        <div class="large-8 medium-12 columns skillsMajorLeft">
+          <div class="row skillsLeft">
+            <div class="large-12 columns skillsLeftTop">
+              <div class="large-6 medium-6 columns skillsLeftTopLeft">
+                <div id="lance" class="whiteBorder boxShadow pro">
+                  <div class="polygonPlace" style="position: absolute; left: -225px">
+
+                  </div>
+                  <!-- Skater image and name goes here -->
+                  <h5 class="name tShadow smallTinyHead" data-name="Lance" data-spot='0'>LANCE MOUNTAIN</h5>
+                  <p class="hidden"></p>
+                </div>
+              </div>
+              <div class="large-6 medium-6 columns skillsLeftTopRight">
+                <div id="rodney" class="whiteBorder pro">
+                  <!-- Skater image and name goes here -->
+                  <h5 class="name tShadow smallTinyHead" data-name="Rodney" data-spot='1'>RODNEY MULLEN</h5>
+                  <p class="hidden"></p>
+                </div>
+              </div>
+            </div>
+            <div class="large-12 columns skillsleftBottom">
+              <div class="large-12 columns whiteBorder boxShadow pro" id="steve">
+                <!-- Skater image and name goes here -->
+                <h5 class="name tShadow smallHead" data-name="Steve" data-spot='2'>STEVE CABALLERO</h5>
+                <p class="hidden"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="large-4 medium-12 columns skillsMajorRight">
+          <div class="skillsRight">
+            <div id="tommyG" class="whiteBorder boxShadow pro">
+              <!-- Skater image and name goes here -->
+              <h5 class="name tShadow bigHead" data-name="Tommy" data-spot='3'>TOMMY GUERRERO</h5>
+              <p class="hidden"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skateboards and modules -->
+      <div class="row skateboardsSection" id="skateboardsSection">
+        <div class="polygonPlace" style="position: absolute; left: -5px">
+
+        </div>
+        <div class="large-12 columns skateboards boxShadow">
+
+          <!-- SEE goTmpl() in main.js -->
+        </div>
+      </div>
+
+      <!-- CONTACT -->
+      <div id="contact" class="contact row boxShadow">
+        <div class="polygonPlace" style="position: absolute; left: -225px">
+
+        </div>
+        <div id="contactLeft" class="large-6 medium-6 small-12 columns">
+          <h6>Contact Us For More Information</h6>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam veritatis quo quasi modi consequatur repellendus, culpa reprehenderit nemo maiores repellat magnam sed quibusdam, nobis tempora! Cum, quae! Quo, cum, quia!
+          </p>
+        </div>
+        <div id="contactRight" class="large-6 medium-6 small-12 columns">
+          <form id="form" action="">
+            <input id="name" type="text" placeholder="NAME" required="required">
+            <input id="email" type="email" placeholder="EMAIL" required="required">
+            <textarea id="message" name="" id="" cols="40" rows="5">YOUR MESSAGE</textarea>
+            <input id="submit" type="submit" value="SUBMIT" style="color: white;">
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer id="lowerSocial" class="row">
+          <div class="icoDiv medium-2 small-2 columns" data-dot=".dot1" data-color="#0F3B91">
+            <a class="ico" href="facebook.com" title="Facebook">b</a>
+          </div>
+          <div class="icoDiv medium-2 small-2 columns" data-dot=".dot2" data-color="#E59A0B">
+            <a class="ico" href="rss.com" title="RSS">,</a>
+          </div>
+          <div class="icoDiv medium-2 small-2 columns" data-dot=".dot3" data-color="#0B90E5">
+            <a class="ico" href="twitter.com" title="twitter">a</a>
+          </div>
+          <div class="icoDiv medium-2 small-2 columns" data-dot=".dot4" data-color="#E82C0C">
+            <a class="ico" href="youtube.com" title="Youtube">r</a>
+          </div>
+          <div class="icoDiv medium-2 small-2 columns" data-dot=".dot4" data-color="#E82C0C">
+            <a class="ico" href="reddit.com" title="Subscribe">C</a>
+          </div>
+          <div class="icoDiv medium-2 small-2 columns" data-dot=".dot4" data-color="#E82C0C">
+            <a class="ico" href="#navTop" title="Scroll to top"><div>L</div></a>
+          </div>
+    </footer>
+
+
+
+    <script src="scripts/vendor.js"></script>
+    <script src="../bower_components/foundation-5.4.0/js/foundation/foundation.reveal.js"></script>
+    <script src="../bower_components/foundation-5.4.0/js/foundation/foundation.joyride.js"></script>
+    <script src="../bower_components/foundation-5.4.0/js/foundation.min.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="../bower_components/moment/moment.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="scripts/templates.js"></script>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="scripts/var.js"></script>
+    <script src="scripts/ajax.js"></script>
+    <script src="scripts/clean.js"></script>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

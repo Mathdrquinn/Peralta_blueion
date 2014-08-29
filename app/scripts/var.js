@@ -18,55 +18,58 @@ var videoBoard = function(p) {
   $('.skillsRight').html(videoTmpl);
   $('.skillsRight').addClass('black');
 };
-
+var z = 0;
 var go = function ($target) {
   goTmpl = '';
-  for (var i = 1; i < 11; i++) {
-      var g = i+1;
-      var b = i-1;
-      if (i === 1) {
-        goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(../images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
-        '<div id=\'myModal' + i + '\' class=\'reveal-modal\' data-reveal style=\'text\-align: center\'>',
-          '<h2>Plan B Ryan Sheckler</h2>',
-          '<h2>Jersey Skateboard Deck</h2>',
-          '<h4>8\"x32\"</h4>',
-          '<img src=\'../images/skateboard_' + i + '.jpg\' style=\'width:100px\'>',
-          '<a style=\'color:grey; font-size:1.4em; margin-left:10px\' href=\'#\' data-reveal-id=\'myModal' + g + '\' class=\'moveRight\'>+1</a>',
-          '<p class=\'lead\'>C\'mon, <br/>You know you want it.</p>',
-          '<a class=\'close-reveal-modal\'>&#215;</a>',
-        '</div>'
-        ].join('');
-        $target.append(goTmpl);
-      }
-      else if (i < 10) {
-        goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(../images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
-        '<div id=\'myModal' + i + '\' class=\'reveal-modal\' data-reveal style=\'text\-align: center\'>',
-          '<h2>Plan B Ryan Sheckler</h2>',
-          '<h2>Jersey Skateboard Deck</h2>',
-          '<h4>8\"x32\"</h4>',
-          '<a style=\'color:grey; font-size:1.4em; margin-right:10px\' href=\'#\' data-reveal-id=\'myModal' + b + '\' class=\'moveLeft\'>- 1</a>',
-          '<img src=\'../images/skateboard_' + i + '.jpg\' style=\'width:12%; min\-width:50px;\'>',
-          '<a style=\'color:grey; font-size:1.4em; margin-left:10px\' href=\'#\' data-reveal-id=\'myModal' + g + '\' class=\'moveRight\'>+1</a>',
-          '<p class=\'lead\'>C\'mon, <br/>You know you want it.</p>',
-          '<a class=\'close-reveal-modal\'>&#215;</a>',
-        '</div>'
-        ].join('');
-        $target.append(goTmpl);
-      }
-      else {
-        goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(../images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
-        '<div id=\'myModal' + i + '\' class=\'reveal-modal\' data-reveal style=\'text\-align: center\'>',
-          '<h2>Plan B Ryan Sheckler</h2>',
-          '<h2>Jersey Skateboard Deck</h2>',
-          '<h4>8\"x32\"</h4>',
-          '<a style=\'color:grey; font-size:1.4em; margin-right:10px\' href=\'#\' data-reveal-id=\'myModal' + b + '\' class=\'moveLeft\'>- 1</a>',
-          '<img src=\'../images/skateboard_' + i + '.jpg\' style=\'width:100px\'>',
-          '<p class=\'lead\'>C\'mon, <br/>You know you want it.</p>',
-          '<a class=\'close-reveal-modal\'>&#215;</a>',
-        '</div>'
-        ].join('');
-        $target.append(goTmpl);
-      }
+  if (z === 0) {
+    z=1;
+    for (var i = 1; i < 11; i++) {
+        var g = i+1;
+        var b = i-1;
+        if (i === 1) {
+          goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(../images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
+          '<div id=\'myModal' + i + '\' class=\'reveal-modal\' data-reveal style=\'text\-align: center\'>',
+            '<h2>Plan B Ryan Sheckler</h2>',
+            '<h2>Jersey Skateboard Deck</h2>',
+            '<h4>8\"x32\"</h4>',
+            '<img src=\'../images/skateboard_' + i + '.jpg\' style=\'width:100px\'>',
+            '<a style=\'color:grey; font-size:1.4em; margin-left:10px\' href=\'#\' data-reveal-id=\'myModal' + g + '\' class=\'moveRight\'>+1</a>',
+            '<p class=\'lead\'>C\'mon, <br/>You know you want it.</p>',
+            '<a class=\'close-reveal-modal\'>&#215;</a>',
+          '</div>'
+          ].join('');
+          $target.append(goTmpl);
+        }
+        else if (i < 10 && i > 1) {
+          goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(../images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
+          '<div id=\'myModal' + i + '\' class=\'reveal-modal\' data-reveal style=\'text\-align: center\'>',
+            '<h2>Plan B Ryan Sheckler</h2>',
+            '<h2>Jersey Skateboard Deck</h2>',
+            '<h4>8\"x32\"</h4>',
+            '<a style=\'color:grey; font-size:1.4em; margin-right:10px\' href=\'#\' data-reveal-id=\'myModal' + b + '\' class=\'moveLeft\'>- 1</a>',
+            '<img src=\'../images/skateboard_' + i + '.jpg\' style=\'width:12%; min\-width:50px;\'>',
+            '<a style=\'color:grey; font-size:1.4em; margin-left:10px\' href=\'#\' data-reveal-id=\'myModal' + g + '\' class=\'moveRight\'>+1</a>',
+            '<p class=\'lead\'>C\'mon, <br/>You know you want it.</p>',
+            '<a class=\'close-reveal-modal\'>&#215;</a>',
+          '</div>'
+          ].join('');
+          $target.append(goTmpl);
+        }
+        else {
+          goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(../images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
+          '<div id=\'myModal' + i + '\' class=\'reveal-modal\' data-reveal style=\'text\-align: center\'>',
+            '<h2>Plan B Ryan Sheckler</h2>',
+            '<h2>Jersey Skateboard Deck</h2>',
+            '<h4>8\"x32\"</h4>',
+            '<a style=\'color:grey; font-size:1.4em; margin-right:10px\' href=\'#\' data-reveal-id=\'myModal' + b + '\' class=\'moveLeft\'>- 1</a>',
+            '<img src=\'../images/skateboard_' + i + '.jpg\' style=\'width:100px\'>',
+            '<p class=\'lead\'>C\'mon, <br/>You know you want it.</p>',
+            '<a class=\'close-reveal-modal\'>&#215;</a>',
+          '</div>'
+          ].join('');
+          $target.append(goTmpl);
+        }
+    }
   }
 };
 

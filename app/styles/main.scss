@@ -1,0 +1,707 @@
+$colorGrey: lightgrey;
+$colorRedFont: rgb(180, 40, 46);
+$colorRed: #E82C0C;
+$fbBlue: #0F3B91;
+$rssOrange: #E59A0B;
+$twitterBlue: #0B90E5;
+$font: 'Oxygen', sans-serif, arial, times;
+$light: 300;
+$medium: 400;
+$heavy:700;
+// Custom Styles
+.container {
+  width:1000px;
+  margin: 5px auto;
+  padding:0;
+}
+body {
+  font-family: $font;
+  font-weight: 300;
+  background-color: #626262;
+  margin-top:-15px;
+  padding-top:10px;
+}
+html {
+  background-color:#626262;
+}
+
+#backgroundImage {
+  background-image: url(../images/background_image_strong.jpg);
+  background-position-x:-265px;
+  width:100%;
+  position: absolute;
+  opacity:0.3;
+  left: 0px;
+  top: 0px;
+  height: 2255px;
+}
+
+#backgroundFilter {
+  background-image: url(../images/background_filter.jpg);
+  width:100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 2256px;
+}
+
+.social {
+  display:block;
+  position:relative;
+  clear:right;
+  font-family: 'iconfonts';
+  float:right;
+  margin-bottom:10px;
+  padding-right:0;
+  text-align:right;
+  height:63px;
+  width:100%;
+  clear:right;
+  z-index: 4;
+  #subscribe {
+    font-family:$font;
+    display:inline-block;
+    padding-bottom: 3px;
+    vertical-align: top;
+    margin-top: 15px;
+    margin-right:80px;
+    text-shadow: black 0 3px;
+    transition:0.4s;
+    a {
+      color:white;
+      font-decoration:none;
+      margin-right:8px;
+    }
+    a:hover {
+      color:$colorRed;
+      font-decoration:underline;
+    }
+    #dot {
+      width:4px;
+      height:4px;
+      margin:4px;
+      display:inline-block;
+      border-radius:100%;
+      background-color:white;
+      border:1px solid white;
+      box-shadow:black 0 2px;
+    }
+  }
+  #dots{
+    padding-top:8px;
+    display:inline-block;
+    font-family:arial;
+    vertical-align:top;
+    .dot {
+      width:3px;
+      height:3px;
+      margin:3px;
+      border-radius:100%;
+      background-color:white;
+      border:2px solid white;
+      box-shadow:black 0 1px;
+    }
+  }
+    .socicon {
+      display:inline-block;
+      position:absolute;
+      top:17px;
+      left:15px;
+      font-size:32px;
+      color:white;
+      opacity:0.4;
+      transition:0.4s;
+    }
+  .facebook {
+    background-color:$fbBlue;
+    position:relative;
+  }
+  .facebook:hover {
+    width: 240px;
+    background-color:grey;
+  }
+  .rss {
+    background-color: $rssOrange;
+    position: relative;
+  }
+  .rss:hover {
+    width:110px;
+    background-color:grey;
+  }
+  .twitter {
+    background-color:$twitterBlue;
+    position: relative;
+  }
+  .twitter:hover {
+    width:225px;
+    background-color:grey;
+  }
+  .youtube {
+    background-color:$colorRed;
+    position: relative;
+  }
+  .youtube:hover {
+    width:255px;
+    background-color:grey;
+  }
+}
+.frame {
+  display:inline-block;
+  position: absolute;
+  right:15px;
+  top:5px;
+}
+#youtubeFrame {
+  right:15px;
+  top:5px;
+}
+#twitterFrame {
+  width:170px;
+  height:62px;
+  right:0px;
+  top:20px;
+}
+#rssFrame {
+  right:10px;
+  top:20px;
+}
+#fbFrame {
+  height:60px;
+  width:175px;
+  right:0px;
+  top:-5px;
+  a {
+    color:white;
+  }
+  span {
+    color:white;
+  }
+}
+.butt {
+  position:relative;
+  padding-top:8px;
+  height:60px;
+  width:60px;
+  display:inline-block;
+  margin-left:5px;
+  transition:0.6s;
+}
+
+///////////////////////////////////////////////
+/** NAV STYLING **/
+#navTop {
+  display:block;
+  position:relative;
+  text-align:center;
+  margin:15px 0;
+  color:white;
+  font-family:$font;
+  font-weight:300;
+  .navUl {
+    margin:0 0;
+    padding:0 0;
+    .navList {
+      list-style-type: none;
+      background-color: $colorRed;
+      margin:0 4px;
+      padding:5px;
+      .navTitleText {
+        font-family:$font;
+        font-weight:300;
+        font-size:1.1em;
+        color:white;
+        margin-bottom:1px;
+        a {
+          color:white;
+          text-decoration:none;
+        }
+        .turnLeft {
+          display:inline-block;
+          width:15px;
+          margin:5px 15px;
+          margin-left:0px;
+          border-bottom:3px solid white;
+          transition:0.4s;
+        }
+        .turnRight {
+          display:inline-block;
+          width:15px;
+          margin:5px 15px;
+          margin-right:0px;
+          border-bottom:3px solid white;
+          transition:0.4s;
+
+        }
+      }
+    }
+    .navList:hover {
+      cursor: pointer;
+    }
+  }
+  .navUl:nth-child(1) {
+    margin-left:0;
+    .navList:nth-child(1) {
+      margin-left:0;
+    }
+  }
+  .navUl:nth-child(4) {
+    margin-right:0;
+    .navList:nth-child(1) {
+      margin-right:0;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////
+/** BANNER **/
+
+/* <div id="banner" class="large-12 columns bborder"><h1><img src="http://placehold.it/200x200" alt="Powell Operalt Skateboards"></h1></div>
+</div> */
+#banner {
+  background-color: #ededed;
+}
+#logo {
+  width:420px;
+  height:250px;
+  opacity:1;
+  background-repeat: no-repeat;
+  background-image: url(../images/logo.png);
+}
+#layer {
+  background-image: url(../images/banner_grid_03.png);
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  opacity: 0.2;
+  position: absolute;
+  left: 0px;
+}
+#carouselImage1 {
+  background-image: url(../images/carousel_1.jpg);
+  background-position-x: -165px;
+  background-position-y: -157px;
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+}
+#carouselImage2 {
+  background-image: url(../images/carousel_2.jpg);
+  background-repeat:no-repeat;
+  background-position: right;
+  background-position-y: -160px;
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+}
+#carouselImage3 {
+  display:none;
+  background-image: url(../images/carousel_3.jpg);
+  background-repeat:no-repeat;
+  background-position:right;
+  background-position-x: 270px;
+  background-position-y: -135px;
+  margin:0;
+  padding:0;
+  width:100%;
+  height:100%;
+  opacity: 1;
+  position: absolute;
+  left: 0px;
+}
+.active{
+}
+.onDeck, .inTheHole{
+  display:none;
+}
+#banner {
+  position:relative;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  height: 345px;
+  border:4px solid white;
+  -webkit-box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+  -moz-box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+  box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+  h1 {
+    position:absolute;
+    top:45px;
+    left:15px;
+  }
+}
+
+////////////////////////////////////////////////////////
+/** Carousel **/
+
+/* <div id="carousel" class="large-12 columns">
+  <span id="1" class="dotsBig"></span>
+  <span id="2" class="dotsBig"></span>
+  <span id="3" class="dotsBig"></span>
+</div> */
+
+#carousel {
+  text-align:center;
+  margin:20px auto;
+  .dotsBig {
+    display:inline-block;
+    position:relative;
+    margin:0 4px;
+    width:15px;
+    height:15px;
+    border-radius:100%;
+    border:5px solid white;
+    background-color:white;
+    -webkit-box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+    -moz-box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+    box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+    transition:0.3s;
+  }
+  .selected {
+    background-color:$colorRed;
+  }
+}
+
+////////////////////////////////////////
+/** ARTICLES **/
+
+/* <div class="box">
+  <article id="article1" class="large-4 columns bborder">
+    <hgroup>
+      <h2>Title</h2>
+      <h4>date</h4>
+    </hgroup>
+    <p class="articleText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, harum ad eaque repellat repellendus, repudiandae soluta recusandae eveniet praesentium fugit, iusto aliquid suscipit, nesciunt et accusantium? Doloribus nihil ipsa unde?</p>
+    <p class="read">[READ MORE]</p>
+  </article>
+</div> */
+article {
+  background-image: url(../images/articles_background.jpg);
+  padding:7.5px 23.5px;
+  height:270px;
+  overflow:hidden;
+  h2 {
+    font-size:1.5em;
+  }
+  h4 {
+    font-size:0.8em;
+  }
+}
+.read {
+  color:$colorRedFont;
+  font-weight:bold;
+  text-align:center;
+  cursor: pointer;
+}
+.box {
+  max-height:273px;
+  overflow-y: scroll;
+}
+.box:nth-child(2) {
+  padding:0;
+  article {
+    margin-right:5px;
+  }
+}
+.box:nth-child(3) {
+  padding:0;
+  article {
+    margin-left:5px;
+    margin-right:5px;
+  }
+}
+.box:nth-child(4) {
+  padding:0;
+  article {
+    margin-left:5px;
+  }
+}
+
+/////////////////////////////////////////////////////
+/** SKATEBOARDERS **/
+
+.skills {
+  margin-top:20px;
+  height:500px;
+  min-height:450px;
+  .skillsMajorLeft {
+    position:relative;
+    padding:0 5px 0 0;
+    .skillsLeft {
+      margin:0;
+      padding:0;
+      .skillsLeftTop {
+        margin:0;
+        padding: 0 0 5px 0;
+        .skillsLeftTopLeft {
+          position:relative;
+          padding: 0 5px 0 0;
+        }
+        .skillsLeftTopRight {
+          padding: 0 0 0 5px;
+        }
+      }
+    }
+    .skillsleftBottom {
+      margin:0;
+      padding:5px 0 0 0;
+      #steve {
+        padding:0;
+      }
+    }
+  }
+  .skillsMajorRight {
+    padding:0 0 0 5px;
+  }
+}
+.name {
+  color:white;
+  font-weight: bold;
+
+}
+.tShadow {
+  text-shadow: black 0 3px;
+}
+#tommyG {
+  background-image: url(../images/tommy.jpg);
+  background-repeat:no-repeat;
+  background-color:black;
+  background-position-x: -400px;
+  filter: saturate(1.5);
+  height:476px;
+  text-align: center;
+}
+#lance {
+  background-image: url(../images/lance.jpg);
+  background-repeat:no-repeat;
+  background-color:black;
+  filter: saturate(1.5);
+  background-position-x: -130px;
+  height:233px;
+  text-align: center;
+}
+
+#rodney {
+  background-image: url(../images/rodney.jpg);
+  background-repeat:no-repeat;
+  background-color:black;
+  filter: saturate(1.5);
+  height:233px;
+  background-position-x: -5px;
+  text-align: center;
+}
+#steve {
+  background-image: url(../images/steve.jpg);
+  background-repeat:no-repeat;
+  background-color:black;
+  filter: saturate(1.5);
+  background-position-y: -100px;
+  height:233px;
+  text-align: center;
+}
+.whiteBorder {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  height: 345px;
+  border:5px solid white;
+}
+.smallHead {
+  padding-top:80px;
+  margin:auto auto;
+}
+.smallTinyHead {
+  padding-top:60px;
+  margin:auto auto;
+}
+.bigHead {
+  padding-top:165px;
+}
+h5{
+  font-size:3em;
+  line-height:1;
+}
+.pro p {
+  color:white;
+  background-color: black;
+  font-weight:$light;
+  box-shadow: 0px 30px 40px rgba(0,0,0,.1);
+}
+
+/////////////////////////////////////////////////////
+/** SKATEBOARDS **/
+
+.skateboardsSection {
+  margin:0 0 20px;
+  padding:0;
+  height: 300px;
+  .moveLeft:hover {
+    font-size: 1.2em;
+    font-weight:400;
+    margin-right:10px;
+    text-decoration: none;
+    color:grey;
+  }
+}
+.skateboards {
+  position: relative;
+  margin:0;
+  padding:5px 2px 15px 15px;
+  background-color:white;
+}
+.boards {
+  display:inline-block;
+  position:relative;
+  height:270px;
+  padding:0;
+  display:inline-block;
+  background-repeat: no-repeat;
+  margin:10px 8px;
+}
+
+
+
+///////////////////////////////////////////////////
+/** Contact Section **/
+
+#contact {
+  position:relative;
+  margin-top:20px;
+  padding:25px;
+  background-image: url(../images/form_background.jpg);
+  p {
+    color:#525152;
+  }
+  #form {
+    #submit {
+      background-color:$colorRed;
+      color:white;
+      width:250px;
+      height:40px;
+      float:right;
+      border:none;
+    }
+    #submit:hover {
+      -webkit-box-shadow: 4px 4px 30px rgba(0, 156, 88, 1);
+      -moz-box-shadow: 4px 0px 30px rgba(0, 156, 88, 1);
+      box-shadow: 0px 0px 40px rgba(0, 156, 88, 1);
+    }
+  }
+}
+h6 {
+  margin-top:0;
+  padding-top:0;
+  font-size: 1.75em;
+  font-weight:$light;
+}
+
+
+footer {
+  display:none;
+}
+
+
+
+
+
+
+
+
+
+
+//bottom
+
+.hidden {
+  display: none;
+}
+.bborder {
+  -webkit-box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+  -moz-box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+  box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+}
+
+.boxShadow {
+  -webkit-box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+  -moz-box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+  box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+}
+.clickable:hover {
+  cursor:pointer;
+}
+.bblue {
+  border:3px solid blue;
+}
+
+.bgreen {
+  border:3px solid blue;
+}
+.video {
+  height:475px;
+  background-color:black;
+}
+.black {
+  background-color:black;
+  height:475px;
+}
+
+#polygon {
+  color:white;
+  font-size:1.25em;
+  font-weight:300;
+  text-align:center;
+  padding:26px 5px 0 10px;
+  background-repeat:no-repeat;
+  display: inline-block;
+  position:absolute;
+  left:0px;
+  top: 0px;
+  width:180px;
+  height:80px;
+  background-color:$colorRed;
+}
+#polygon:after {
+   content:"";
+   position: absolute;
+   left: 100%;
+   top: 0px;
+   width: 0;
+   height: 0;
+   border-top: 40px solid transparent;
+   border-left: 40px solid $colorRed;
+   border-bottom: 40px solid transparent;
+}
+#polygonDrop {
+  color:white;
+  font-size:1.25em;
+  font-weight:300;
+  text-align:right;
+  padding-top:30px;
+  background-repeat:no-repeat;
+  display: inline-block;
+  position:absolute;
+  left:0px;
+  top: 3px;
+  width:180px;
+  height:80px;
+  background-color:lightgrey;
+}
+#polygonDrop:after {
+   content:"";
+   position: absolute;
+   left: 100%;
+   top: 0px;
+   width: 0;
+   height: 0;
+   border-top: 40px solid transparent;
+   border-left: 40px solid lightgrey;
+   border-bottom: 40px solid transparent;
+   //box-shadow: 0px 4px 0px rgba(204, 204, 204, 0.3);
+}

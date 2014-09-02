@@ -32,7 +32,7 @@ var go = function ($target) {
         var g = i+1;
         var b = i-1;
         if (i === 1) {
-          goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(../images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
+          goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
           '<div id=\'myModal' + i + '\' class=\'reveal-modal\' data-reveal style=\'text\-align: center\'>',
             '<h2>Plan B Ryan Sheckler</h2>',
             '<h2>Jersey Skateboard Deck</h2>',
@@ -46,7 +46,7 @@ var go = function ($target) {
           $target.append(goTmpl);
         }
         else if (i < 10 && i > 1) {
-          goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(../images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
+          goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
           '<div id=\'myModal' + i + '\' class=\'reveal-modal\' data-reveal style=\'text\-align: center\'>',
             '<h2>Plan B Ryan Sheckler</h2>',
             '<h2>Jersey Skateboard Deck</h2>',
@@ -61,7 +61,7 @@ var go = function ($target) {
           $target.append(goTmpl);
         }
         else {
-          goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(../images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
+          goTmpl = ['<a href=\'#\' data-reveal-id=\'myModal' + i + '\' title=\'Click to See More\' style=\'background\-image: url(images/skateboard_' + i + '.jpg)\' id=\'board' + i + '\' class=\'large-1 columns boards toolio\'></a>',
           '<div id=\'myModal' + i + '\' class=\'reveal-modal\' data-reveal style=\'text\-align: center\'>',
             '<h2>Plan B Ryan Sheckler</h2>',
             '<h2>Jersey Skateboard Deck</h2>',

@@ -19,7 +19,7 @@ var videoBoard = function(p) {
         videoTmpl += '<a style=\'background\-color: #E82C0C\' href=\'#\' id=\'' + vidArr[j].name + '\' class=\'name button expand\' data\-spot=\'' + vidArr[j].spot + '\'> Watch ' + vidArr[j].name + '</a>';
       }
     }
-  videoTmpl += '<a id=\'close\' href=\'#\' class=\'button\' role=\'button\'>CLOSE</a><img style=\'width: 200px\'id=\'whoa\' src=\'../images/video_logo.png\' title=\'Powell Peralta\'></div>';
+  videoTmpl += '<a id=\'close\' href=\'#\' class=\'button\' role=\'button\'>CLOSE</a><img style=\'width: 200px\'id=\'whoa\' src=\'images/video_logo.png\' title=\'Powell Peralta\'></div>';
   $('.skillsRight').html(videoTmpl);
   $('.skillsRight').addClass('black');
 };
